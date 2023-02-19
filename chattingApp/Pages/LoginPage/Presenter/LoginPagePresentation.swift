@@ -9,4 +9,5 @@ import UIKit
 
 protocol LoginPagePresentation {
     func back()
+    func logInCheck(email : String, password: String)
 }

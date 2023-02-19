@@ -8,5 +8,5 @@
 import UIKit
 
 protocol LoginPageViewContract : UIViewController {
-    func display()
+    func logInFailed()
 }
