@@ -11,6 +11,7 @@
 		56C16564F24F7F7E254E6E75 /* Pods_chattingApp_chattingAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDA7A3908539D71FE81C8AA /* Pods_chattingApp_chattingAppUITests.framework */; };
 		A4C9BB09FACCC408EFC00578 /* Pods_chattingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87FAC5081F66E432D5D9592 /* Pods_chattingApp.framework */; };
 		FA094BFD29A2C4CA0046288A /* LoginPageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA094BFC29A2C4CA0046288A /* LoginPageUseCase.swift */; };
+		FA094BFF29A2CD470046288A /* MessagesMainPageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA094BFE29A2CD470046288A /* MessagesMainPageUseCase.swift */; };
 		FA29DDFE29A2158E00D032B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DDFD29A2158E00D032B7 /* AppDelegate.swift */; };
 		FA29DE0029A2158E00D032B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DDFF29A2158E00D032B7 /* SceneDelegate.swift */; };
 		FA29DE0229A2158E00D032B7 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE0129A2158E00D032B7 /* LoginPageViewController.swift */; };
@@ -67,6 +68,7 @@
 		EC5F110B58DCF747CB520B52 /* Pods-chattingApp-chattingAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chattingApp-chattingAppUITests.release.xcconfig"; path = "Target Support Files/Pods-chattingApp-chattingAppUITests/Pods-chattingApp-chattingAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EF7C13F1014CE0EFCDBA786F /* Pods_chattingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chattingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA094BFC29A2C4CA0046288A /* LoginPageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageUseCase.swift; sourceTree = "<group>"; };
+		FA094BFE29A2CD470046288A /* MessagesMainPageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesMainPageUseCase.swift; sourceTree = "<group>"; };
 		FA29DDFA29A2158E00D032B7 /* chattingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chattingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA29DDFD29A2158E00D032B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA29DDFF29A2158E00D032B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 		FA99007629A293FD001381EA /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				FA094BFE29A2CD470046288A /* MessagesMainPageUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				FA99005F29A2605B001381EA /* ColorsExtensions.swift in Sources */,
 				FA99007129A28C09001381EA /* RegisterPageUseCase.swift in Sources */,
 				FA29DE3429A2186500D032B7 /* LoginPagePresentation.swift in Sources */,
+				FA094BFF29A2CD470046288A /* MessagesMainPageUseCase.swift in Sources */,
 				FA094BFD29A2C4CA0046288A /* LoginPageUseCase.swift in Sources */,
 				FA29DE0229A2158E00D032B7 /* LoginPageViewController.swift in Sources */,
 				FA99007C29A294BC001381EA /* MessagesMainPagePresenter.swift in Sources */,
