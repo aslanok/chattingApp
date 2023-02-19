@@ -9,6 +9,8 @@ import UIKit
 
 protocol HomePageRouting{
     func back(from view : UIViewController)
+    func presentLoginPage(from view: UIViewController)
+    func presentRegisterPage(from view : UIViewController)
 }
 
 class HomePageRouter : HomePageRouting {
@@ -25,7 +27,13 @@ class HomePageRouter : HomePageRouting {
         return view
     }
     
+    func presentLoginPage(from view : UIViewController) {
+        view.present(LoginPageRouter().viewController, animated: true)
+    }
     
+    func presentRegisterPage(from view: UIViewController) {
+        
+    }
     
     func back(from view: UIViewController) {
         //view.dismiss(animated: true)

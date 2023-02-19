@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController ,LoginPageViewContract {
+class LoginPageViewController: UIViewController ,LoginPageViewContract {
     
     var presenter : LoginPagePresentation?
     
@@ -45,7 +45,7 @@ class LoginViewController: UIViewController ,LoginPageViewContract {
     
     @objc func buttonClicked(){
         print("buttonClicked")
-        presenter?.goOtherPage()
+        presenter?.back()
     }
     
     func display() {

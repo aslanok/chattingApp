@@ -8,5 +8,5 @@
 import UIKit
 
 protocol LoginPagePresentation {
-    func goOtherPage()
+    func back()
 }

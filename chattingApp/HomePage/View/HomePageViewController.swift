@@ -72,7 +72,7 @@ class HomePageViewController : UIViewController, HomePageViewContract{
     }
     
     @objc func logInButtonClicked(){
-        print("login")
+        presenter?.goLoginPage()
     }
     
     @objc func registerButtonClicked(){

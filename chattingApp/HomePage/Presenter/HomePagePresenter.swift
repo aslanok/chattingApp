@@ -8,7 +8,8 @@
 import UIKit
 
 protocol HomePagePresentation{
-    func back()
+    func goLoginPage()
+    func goRegisterPage()
 }
 
 class HomePagePresenter : HomePagePresentation {
@@ -21,8 +22,12 @@ class HomePagePresenter : HomePagePresentation {
         self.router = router
     }
     
-    func back() {
-        router.back(from: output)
+    func goLoginPage() {
+        router.presentLoginPage(from: output)
+    }
+    
+    func goRegisterPage() {
+        
     }
     
 }

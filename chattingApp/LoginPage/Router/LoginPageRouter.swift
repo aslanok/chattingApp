@@ -7,14 +7,15 @@
 import UIKit
 
 protocol LoginPageRouting {
-    func presentHomePage(from view: UIViewController)
+    func back(from view: UIViewController)
 }
 
 class LoginPageRouter : LoginPageRouting {
     
     var viewController : UIViewController {
-        let view = LoginViewController()
+        let view = LoginPageViewController()
         
+        view.modalPresentationStyle = .fullScreen
         //let archiver =
         //let consumer =
         //let fetch
@@ -31,9 +32,7 @@ class LoginPageRouter : LoginPageRouting {
     }
     
     
-    func presentHomePage(from view : UIViewController) {
-        DispatchQueue.main.async {
-            view.present(HomePageRouter().viewController, animated: true)
-        }
+    func back(from view : UIViewController) {
+        view.dismiss(animated: true)
     }
 }

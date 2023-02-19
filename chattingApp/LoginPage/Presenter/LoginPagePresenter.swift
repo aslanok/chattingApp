@@ -17,8 +17,8 @@ class LoginPagePresenter : LoginPagePresentation {
         self.output = view
     }
     
-    func goOtherPage() {
+    func back() {
         print("presenter'a geçtik")
-        router.presentHomePage(from: output)
+        router.back(from: output)
     }
 }
