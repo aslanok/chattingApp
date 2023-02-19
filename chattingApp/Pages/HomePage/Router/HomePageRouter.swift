@@ -32,7 +32,7 @@ class HomePageRouter : HomePageRouting {
     }
     
     func presentRegisterPage(from view: UIViewController) {
-        
+        view.present(RegisterPageRouter().viewController, animated: true)
     }
     
     func back(from view: UIViewController) {

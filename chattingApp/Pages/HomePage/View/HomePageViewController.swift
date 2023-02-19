@@ -77,6 +77,7 @@ class HomePageViewController : UIViewController, HomePageViewContract{
     
     @objc func registerButtonClicked(){
         print("register")
+        presenter?.goRegisterPage()
     }
     
 }

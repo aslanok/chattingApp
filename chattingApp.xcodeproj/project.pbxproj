@@ -27,6 +27,12 @@
 		FA29DE4529A228F000D032B7 /* HomePagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE4429A228F000D032B7 /* HomePagePresenter.swift */; };
 		FA7EC15529A255C100993F24 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA7EC15429A255C100993F24 /* GoogleService-Info.plist */; };
 		FA99005F29A2605B001381EA /* ColorsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99005E29A2605B001381EA /* ColorsExtensions.swift */; };
+		FA99006529A26930001381EA /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99006429A26930001381EA /* RegisterPageViewController.swift */; };
+		FA99006729A26952001381EA /* RegisterPageViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99006629A26952001381EA /* RegisterPageViewContract.swift */; };
+		FA99006929A26991001381EA /* RegisterPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99006829A26991001381EA /* RegisterPagePresenter.swift */; };
+		FA99006B29A269CB001381EA /* RegisterPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99006A29A269CB001381EA /* RegisterPageRouter.swift */; };
+		FA99006E29A272B2001381EA /* TextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99006D29A272B2001381EA /* TextFieldExtensions.swift */; };
+		FA99007129A28C09001381EA /* RegisterPageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99007029A28C09001381EA /* RegisterPageUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +83,12 @@
 		FA29DE4429A228F000D032B7 /* HomePagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePagePresenter.swift; sourceTree = "<group>"; };
 		FA7EC15429A255C100993F24 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA99005E29A2605B001381EA /* ColorsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsExtensions.swift; sourceTree = "<group>"; };
+		FA99006429A26930001381EA /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
+		FA99006629A26952001381EA /* RegisterPageViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewContract.swift; sourceTree = "<group>"; };
+		FA99006829A26991001381EA /* RegisterPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPagePresenter.swift; sourceTree = "<group>"; };
+		FA99006A29A269CB001381EA /* RegisterPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageRouter.swift; sourceTree = "<group>"; };
+		FA99006D29A272B2001381EA /* TextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtensions.swift; sourceTree = "<group>"; };
+		FA99007029A28C09001381EA /* RegisterPageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,9 +167,8 @@
 		FA29DDFC29A2158E00D032B7 /* chattingApp */ = {
 			isa = PBXGroup;
 			children = (
-				FA99005D29A26047001381EA /* Components */,
-				FA29DE3B29A227A800D032B7 /* HomePage */,
-				FA29DE2E29A217A900D032B7 /* LoginPage */,
+				FA99006C29A26B16001381EA /* Pages */,
+				FA99005D29A26047001381EA /* Extensions */,
 				FA29DDFD29A2158E00D032B7 /* AppDelegate.swift */,
 				FA29DDFF29A2158E00D032B7 /* SceneDelegate.swift */,
 				FA29DE0629A2159400D032B7 /* Assets.xcassets */,
@@ -271,12 +282,67 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		FA99005D29A26047001381EA /* Components */ = {
+		FA99005D29A26047001381EA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				FA99005E29A2605B001381EA /* ColorsExtensions.swift */,
+				FA99006D29A272B2001381EA /* TextFieldExtensions.swift */,
 			);
-			path = Components;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA99006029A268EF001381EA /* RegisterPage */ = {
+			isa = PBXGroup;
+			children = (
+				FA99006F29A28BC1001381EA /* UseCase */,
+				FA99006329A2690D001381EA /* Presenter */,
+				FA99006229A26908001381EA /* View */,
+				FA99006129A26902001381EA /* Router */,
+			);
+			path = RegisterPage;
+			sourceTree = "<group>";
+		};
+		FA99006129A26902001381EA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FA99006A29A269CB001381EA /* RegisterPageRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FA99006229A26908001381EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA99006429A26930001381EA /* RegisterPageViewController.swift */,
+				FA99006629A26952001381EA /* RegisterPageViewContract.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA99006329A2690D001381EA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FA99006829A26991001381EA /* RegisterPagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FA99006C29A26B16001381EA /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				FA29DE3B29A227A800D032B7 /* HomePage */,
+				FA29DE2E29A217A900D032B7 /* LoginPage */,
+				FA99006029A268EF001381EA /* RegisterPage */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		FA99006F29A28BC1001381EA /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				FA99007029A28C09001381EA /* RegisterPageUseCase.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -519,6 +585,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA99005F29A2605B001381EA /* ColorsExtensions.swift in Sources */,
+				FA99007129A28C09001381EA /* RegisterPageUseCase.swift in Sources */,
 				FA29DE3429A2186500D032B7 /* LoginPagePresentation.swift in Sources */,
 				FA29DE0229A2158E00D032B7 /* LoginPageViewController.swift in Sources */,
 				FA29DE4329A2287100D032B7 /* HomePageViewController.swift in Sources */,
@@ -526,8 +593,13 @@
 				FA29DE3A29A2190300D032B7 /* LoginPageViewContract.swift in Sources */,
 				FA29DE3629A2187200D032B7 /* LoginPagePresenter.swift in Sources */,
 				FA29DE0029A2158E00D032B7 /* SceneDelegate.swift in Sources */,
+				FA99006929A26991001381EA /* RegisterPagePresenter.swift in Sources */,
+				FA99006529A26930001381EA /* RegisterPageViewController.swift in Sources */,
 				FA29DE4129A227DF00D032B7 /* HomePageRouter.swift in Sources */,
+				FA99006729A26952001381EA /* RegisterPageViewContract.swift in Sources */,
 				FA29DE4529A228F000D032B7 /* HomePagePresenter.swift in Sources */,
+				FA99006E29A272B2001381EA /* TextFieldExtensions.swift in Sources */,
+				FA99006B29A269CB001381EA /* RegisterPageRouter.swift in Sources */,
 				FA29DE3829A2188100D032B7 /* LoginPageRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

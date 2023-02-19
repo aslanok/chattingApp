@@ -27,7 +27,7 @@ class HomePagePresenter : HomePagePresentation {
     }
     
     func goRegisterPage() {
-        
+        router.presentRegisterPage(from: output)
     }
     
 }
