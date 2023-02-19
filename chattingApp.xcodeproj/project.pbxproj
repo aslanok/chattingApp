@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		FA29DDFE29A2158E00D032B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DDFD29A2158E00D032B7 /* AppDelegate.swift */; };
 		FA29DE0029A2158E00D032B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DDFF29A2158E00D032B7 /* SceneDelegate.swift */; };
-		FA29DE0229A2158E00D032B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE0129A2158E00D032B7 /* ViewController.swift */; };
+		FA29DE0229A2158E00D032B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE0129A2158E00D032B7 /* LoginViewController.swift */; };
 		FA29DE0529A2158E00D032B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA29DE0329A2158E00D032B7 /* Main.storyboard */; };
 		FA29DE0729A2159400D032B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA29DE0629A2159400D032B7 /* Assets.xcassets */; };
 		FA29DE0A29A2159400D032B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA29DE0829A2159400D032B7 /* LaunchScreen.storyboard */; };
 		FA29DE1529A2159400D032B7 /* chattingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE1429A2159400D032B7 /* chattingAppTests.swift */; };
 		FA29DE1F29A2159400D032B7 /* chattingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE1E29A2159400D032B7 /* chattingAppUITests.swift */; };
 		FA29DE2129A2159400D032B7 /* chattingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE2029A2159400D032B7 /* chattingAppUITestsLaunchTests.swift */; };
+		FA29DE3429A2186500D032B7 /* LoginPagePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE3329A2186500D032B7 /* LoginPagePresentation.swift */; };
+		FA29DE3629A2187200D032B7 /* LoginPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE3529A2187200D032B7 /* LoginPagePresenter.swift */; };
+		FA29DE3829A2188100D032B7 /* LoginPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE3729A2188100D032B7 /* LoginPageRouter.swift */; };
+		FA29DE3A29A2190300D032B7 /* LoginPageViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE3929A2190300D032B7 /* LoginPageViewContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,7 @@
 		FA29DDFA29A2158E00D032B7 /* chattingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chattingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA29DDFD29A2158E00D032B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA29DDFF29A2158E00D032B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA29DE0129A2158E00D032B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA29DE0129A2158E00D032B7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FA29DE0429A2158E00D032B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA29DE0629A2159400D032B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA29DE0929A2159400D032B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,10 @@
 		FA29DE1A29A2159400D032B7 /* chattingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chattingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA29DE1E29A2159400D032B7 /* chattingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chattingAppUITests.swift; sourceTree = "<group>"; };
 		FA29DE2029A2159400D032B7 /* chattingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chattingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FA29DE3329A2186500D032B7 /* LoginPagePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPagePresentation.swift; sourceTree = "<group>"; };
+		FA29DE3529A2187200D032B7 /* LoginPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPagePresenter.swift; sourceTree = "<group>"; };
+		FA29DE3729A2188100D032B7 /* LoginPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageRouter.swift; sourceTree = "<group>"; };
+		FA29DE3929A2190300D032B7 /* LoginPageViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +107,9 @@
 		FA29DDFC29A2158E00D032B7 /* chattingApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA29DE2E29A217A900D032B7 /* LoginPage */,
 				FA29DDFD29A2158E00D032B7 /* AppDelegate.swift */,
 				FA29DDFF29A2158E00D032B7 /* SceneDelegate.swift */,
-				FA29DE0129A2158E00D032B7 /* ViewController.swift */,
 				FA29DE0329A2158E00D032B7 /* Main.storyboard */,
 				FA29DE0629A2159400D032B7 /* Assets.xcassets */,
 				FA29DE0829A2159400D032B7 /* LaunchScreen.storyboard */,
@@ -125,6 +133,50 @@
 				FA29DE2029A2159400D032B7 /* chattingAppUITestsLaunchTests.swift */,
 			);
 			path = chattingAppUITests;
+			sourceTree = "<group>";
+		};
+		FA29DE2E29A217A900D032B7 /* LoginPage */ = {
+			isa = PBXGroup;
+			children = (
+				FA29DE3229A217D000D032B7 /* UseCase */,
+				FA29DE3129A217CA00D032B7 /* Router */,
+				FA29DE3029A217C400D032B7 /* Presenter */,
+				FA29DE2F29A217B100D032B7 /* View */,
+			);
+			path = LoginPage;
+			sourceTree = "<group>";
+		};
+		FA29DE2F29A217B100D032B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA29DE0129A2158E00D032B7 /* LoginViewController.swift */,
+				FA29DE3929A2190300D032B7 /* LoginPageViewContract.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA29DE3029A217C400D032B7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FA29DE3329A2186500D032B7 /* LoginPagePresentation.swift */,
+				FA29DE3529A2187200D032B7 /* LoginPagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FA29DE3129A217CA00D032B7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FA29DE3729A2188100D032B7 /* LoginPageRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FA29DE3229A217D000D032B7 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +310,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA29DE0229A2158E00D032B7 /* ViewController.swift in Sources */,
+				FA29DE3429A2186500D032B7 /* LoginPagePresentation.swift in Sources */,
+				FA29DE0229A2158E00D032B7 /* LoginViewController.swift in Sources */,
 				FA29DDFE29A2158E00D032B7 /* AppDelegate.swift in Sources */,
+				FA29DE3A29A2190300D032B7 /* LoginPageViewContract.swift in Sources */,
+				FA29DE3629A2187200D032B7 /* LoginPagePresenter.swift in Sources */,
 				FA29DE0029A2158E00D032B7 /* SceneDelegate.swift in Sources */,
+				FA29DE3829A2188100D032B7 /* LoginPageRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
