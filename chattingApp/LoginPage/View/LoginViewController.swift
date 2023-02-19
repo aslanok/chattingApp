@@ -11,8 +11,6 @@ class LoginViewController: UIViewController ,LoginPageViewContract {
     
     var presenter : LoginPagePresentation?
     
-    let initialViewController = HomePageRouter().viewController
-    
     private lazy var label : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -43,9 +41,6 @@ class LoginViewController: UIViewController ,LoginPageViewContract {
         nextPageButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         nextPageButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
         
-        //presenter?.goOtherPage()
-        // Do any additional setup after loading the view.
-        //print("presenter : \(presenter)")
     }
     
     @objc func buttonClicked(){

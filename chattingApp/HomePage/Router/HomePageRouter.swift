@@ -28,6 +28,6 @@ class HomePageRouter : HomePageRouting {
     
     
     func back(from view: UIViewController) {
-        view.dismiss(animated: true)
+        //view.dismiss(animated: true)
     }
 }
