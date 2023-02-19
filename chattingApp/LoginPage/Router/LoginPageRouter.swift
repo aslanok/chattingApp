@@ -7,7 +7,7 @@
 import UIKit
 
 protocol LoginPageRouting {
-    func presentMainPage(from view: UIViewController)
+    func presentHomePage(from view: UIViewController)
 }
 
 class LoginPageRouter : LoginPageRouting {
@@ -25,10 +25,15 @@ class LoginPageRouter : LoginPageRouting {
         //fetchAsadjk.output = presenter
         
         view.presenter = presenter
+        
+        
         return view
     }
     
     
-    func presentMainPage(from view : UIViewController) {
+    func presentHomePage(from view : UIViewController) {
+        DispatchQueue.main.async {
+            view.present(HomePageRouter().viewController, animated: true)
+        }
     }
 }

@@ -11,6 +11,8 @@ class LoginViewController: UIViewController ,LoginPageViewContract {
     
     var presenter : LoginPagePresentation?
     
+    let initialViewController = HomePageRouter().viewController
+    
     private lazy var label : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -23,12 +25,14 @@ class LoginViewController: UIViewController ,LoginPageViewContract {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Sonraki Sayfaya Geçiniz", for: .normal)
         button.backgroundColor = .cyan
+        button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
         return button
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .white
+        print("viewUploaded")
         view.addSubview(label)
         label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
@@ -39,8 +43,14 @@ class LoginViewController: UIViewController ,LoginPageViewContract {
         nextPageButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         nextPageButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
         
-        presenter?.goOtherPage()
+        //presenter?.goOtherPage()
         // Do any additional setup after loading the view.
+        //print("presenter : \(presenter)")
+    }
+    
+    @objc func buttonClicked(){
+        print("buttonClicked")
+        presenter?.goOtherPage()
     }
     
     func display() {

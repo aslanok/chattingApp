@@ -20,6 +20,9 @@
 		FA29DE3629A2187200D032B7 /* LoginPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE3529A2187200D032B7 /* LoginPagePresenter.swift */; };
 		FA29DE3829A2188100D032B7 /* LoginPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE3729A2188100D032B7 /* LoginPageRouter.swift */; };
 		FA29DE3A29A2190300D032B7 /* LoginPageViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE3929A2190300D032B7 /* LoginPageViewContract.swift */; };
+		FA29DE4129A227DF00D032B7 /* HomePageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE4029A227DF00D032B7 /* HomePageRouter.swift */; };
+		FA29DE4329A2287100D032B7 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE4229A2287100D032B7 /* HomePageViewController.swift */; };
+		FA29DE4529A228F000D032B7 /* HomePagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE4429A228F000D032B7 /* HomePagePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		FA29DE3529A2187200D032B7 /* LoginPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPagePresenter.swift; sourceTree = "<group>"; };
 		FA29DE3729A2188100D032B7 /* LoginPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageRouter.swift; sourceTree = "<group>"; };
 		FA29DE3929A2190300D032B7 /* LoginPageViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewContract.swift; sourceTree = "<group>"; };
+		FA29DE4029A227DF00D032B7 /* HomePageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageRouter.swift; sourceTree = "<group>"; };
+		FA29DE4229A2287100D032B7 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		FA29DE4429A228F000D032B7 /* HomePagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePagePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,7 @@
 		FA29DDFC29A2158E00D032B7 /* chattingApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA29DE3B29A227A800D032B7 /* HomePage */,
 				FA29DE2E29A217A900D032B7 /* LoginPage */,
 				FA29DDFD29A2158E00D032B7 /* AppDelegate.swift */,
 				FA29DDFF29A2158E00D032B7 /* SceneDelegate.swift */,
@@ -177,6 +184,48 @@
 			children = (
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		FA29DE3B29A227A800D032B7 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				FA29DE3F29A227CB00D032B7 /* Router */,
+				FA29DE3E29A227C600D032B7 /* View */,
+				FA29DE3D29A227BF00D032B7 /* Presenter */,
+				FA29DE3C29A227B700D032B7 /* UseCase */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		FA29DE3C29A227B700D032B7 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		FA29DE3D29A227BF00D032B7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FA29DE4429A228F000D032B7 /* HomePagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FA29DE3E29A227C600D032B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA29DE4229A2287100D032B7 /* HomePageViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA29DE3F29A227CB00D032B7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FA29DE4029A227DF00D032B7 /* HomePageRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,10 +361,13 @@
 			files = (
 				FA29DE3429A2186500D032B7 /* LoginPagePresentation.swift in Sources */,
 				FA29DE0229A2158E00D032B7 /* LoginViewController.swift in Sources */,
+				FA29DE4329A2287100D032B7 /* HomePageViewController.swift in Sources */,
 				FA29DDFE29A2158E00D032B7 /* AppDelegate.swift in Sources */,
 				FA29DE3A29A2190300D032B7 /* LoginPageViewContract.swift in Sources */,
 				FA29DE3629A2187200D032B7 /* LoginPagePresenter.swift in Sources */,
 				FA29DE0029A2158E00D032B7 /* SceneDelegate.swift in Sources */,
+				FA29DE4129A227DF00D032B7 /* HomePageRouter.swift in Sources */,
+				FA29DE4529A228F000D032B7 /* HomePagePresenter.swift in Sources */,
 				FA29DE3829A2188100D032B7 /* LoginPageRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
