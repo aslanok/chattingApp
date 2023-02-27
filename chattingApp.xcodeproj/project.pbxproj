@@ -27,6 +27,7 @@
 		FA29DE4129A227DF00D032B7 /* HomePageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE4029A227DF00D032B7 /* HomePageRouter.swift */; };
 		FA29DE4329A2287100D032B7 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE4229A2287100D032B7 /* HomePageViewController.swift */; };
 		FA29DE4529A228F000D032B7 /* HomePagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29DE4429A228F000D032B7 /* HomePagePresenter.swift */; };
+		FA3D706229AD66BF00BC00FA /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D706129AD66BF00BC00FA /* MessageTableViewCell.swift */; };
 		FA7EC15529A255C100993F24 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA7EC15429A255C100993F24 /* GoogleService-Info.plist */; };
 		FA99005F29A2605B001381EA /* ColorsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99005E29A2605B001381EA /* ColorsExtensions.swift */; };
 		FA99006529A26930001381EA /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99006429A26930001381EA /* RegisterPageViewController.swift */; };
@@ -88,6 +89,7 @@
 		FA29DE4029A227DF00D032B7 /* HomePageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageRouter.swift; sourceTree = "<group>"; };
 		FA29DE4229A2287100D032B7 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		FA29DE4429A228F000D032B7 /* HomePagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePagePresenter.swift; sourceTree = "<group>"; };
+		FA3D706129AD66BF00BC00FA /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		FA7EC15429A255C100993F24 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA99005E29A2605B001381EA /* ColorsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsExtensions.swift; sourceTree = "<group>"; };
 		FA99006429A26930001381EA /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 				FA99007529A293F5001381EA /* Presenter */,
 				FA99007429A293F0001381EA /* Router */,
 				FA99007329A293E9001381EA /* View */,
+				FA3D706129AD66BF00BC00FA /* MessageTableViewCell.swift */,
 			);
 			path = MessagesPage;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				FA99006729A26952001381EA /* RegisterPageViewContract.swift in Sources */,
 				FA99007A29A29474001381EA /* MessagesMainPageRouter.swift in Sources */,
 				FA29DE4529A228F000D032B7 /* HomePagePresenter.swift in Sources */,
+				FA3D706229AD66BF00BC00FA /* MessageTableViewCell.swift in Sources */,
 				FA99006E29A272B2001381EA /* TextFieldExtensions.swift in Sources */,
 				FA99006B29A269CB001381EA /* RegisterPageRouter.swift in Sources */,
 				FA29DE3829A2188100D032B7 /* LoginPageRouter.swift in Sources */,
