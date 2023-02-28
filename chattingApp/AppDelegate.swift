@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FirebaseCore
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Firebase configuration line
         FirebaseApp.configure()
+        let db = Firestore.firestore()
+        print(db)
+        
+        
         return true
     }
 
