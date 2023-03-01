@@ -8,12 +8,14 @@
 import UIKit
 
 protocol MessagesMainPageViewContract : UIViewController {
-    
+    func displayMessageList(list : [Message])
 }
 
 class MessagesMainPageViewController : UIViewController,MessagesMainPageViewContract {
     
     internal var presenter : MessagesMainPagePresentation?
+    
+    var messages : [Message] = [Message]()
     
     private lazy var backButton : UIButton = {
         let button = UIButton()
@@ -40,7 +42,7 @@ class MessagesMainPageViewController : UIViewController,MessagesMainPageViewCont
         return view
     }()
     
-    private let messageTextField : UITextField = {
+    private lazy var messageTextField : UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Enter a message"
@@ -61,6 +63,16 @@ class MessagesMainPageViewController : UIViewController,MessagesMainPageViewCont
         return tableView
     }()
     
+    private lazy var sendMessageButton : UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .clear
+        button.setTitle("Send", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(messageSendClicked), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .ChatAppColor.pink100
@@ -68,6 +80,8 @@ class MessagesMainPageViewController : UIViewController,MessagesMainPageViewCont
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        presenter?.loadMessages()
         
     }
 
@@ -91,15 +105,32 @@ class MessagesMainPageViewController : UIViewController,MessagesMainPageViewCont
         bottomCardView.addSubview(messageTextField)
         messageTextField.topAnchor.constraint(equalTo: bottomCardView.topAnchor, constant: 10).isActive = true
         messageTextField.leadingAnchor.constraint(equalTo: bottomCardView.leadingAnchor, constant: 20).isActive = true
-        messageTextField.trailingAnchor.constraint(equalTo: bottomCardView.trailingAnchor, constant: -20).isActive = true
+        messageTextField.trailingAnchor.constraint(equalTo: bottomCardView.trailingAnchor, constant: -80).isActive = true
         messageTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        bottomCardView.addSubview(sendMessageButton)
+        sendMessageButton.centerYAnchor.constraint(equalTo: messageTextField.centerYAnchor).isActive = true
+        sendMessageButton.trailingAnchor.constraint(equalTo: bottomCardView.trailingAnchor, constant: -20).isActive = true
+        sendMessageButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        sendMessageButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
         view.addSubview(tableView)
         tableView.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 20).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         tableView.bottomAnchor.constraint(equalTo: bottomCardView.topAnchor).isActive = true
-        
+    }
+    
+    func displayMessageList(list: [Message]) {
+        messages = list
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    @objc func messageSendClicked(){
+        print("butona tıklandı")
+        presenter?.messageSend(messageText: messageTextField.text ?? "bos mesaj")
     }
     
     @objc func logOutButtonClicked(){
@@ -114,11 +145,12 @@ class MessagesMainPageViewController : UIViewController,MessagesMainPageViewCont
 
 extension MessagesMainPageViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as! MessageTableViewCell
+        cell.setupCell(message: messages[indexPath.row])
         return cell
     }
     

@@ -41,7 +41,7 @@ class MessageTableViewCell : UITableViewCell {
         contentView.addSubview(cardView)
         cardView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 1).isActive = true
         cardView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20).isActive = true
-        cardView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -70).isActive = true
+        cardView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -100).isActive = true
         cardView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         cardView.addSubview(messageLabel)
@@ -52,13 +52,18 @@ class MessageTableViewCell : UITableViewCell {
         contentView.addSubview(messageSender)
         messageSender.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20).isActive = true
         messageSender.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
-        messageSender.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        messageSender.widthAnchor.constraint(equalToConstant: 70).isActive = true
         messageSender.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupCell(message : Message) {
+        messageLabel.text = message.body
+        messageSender.text = message.sender
     }
     
     override class func awakeFromNib() {

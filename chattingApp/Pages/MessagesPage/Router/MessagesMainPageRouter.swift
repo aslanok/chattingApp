@@ -17,12 +17,16 @@ class MessagesMainPageRouter : MessagesMainPageRouting {
     var viewController: UIViewController {
         let view = MessagesMainPageViewController()
         let messagesMainPageUseCase = MessagesMainPageUseCase()
+        let messageSenderUseCase = MessageSenderUseCase()
+        let messagesLoadUseCase = MessagesLoadUseCase()
         
-        let presenter = MessagesMainPagePresenter(router: self, view: view, messagesMainPageCase: messagesMainPageUseCase)
+        let presenter = MessagesMainPagePresenter(router: self, view: view, messagesMainPageCase: messagesMainPageUseCase, messageSenderCase: messageSenderUseCase, messagesLoadCase: messagesLoadUseCase)
         
         view.modalPresentationStyle = .fullScreen
         
         messagesMainPageUseCase.output = presenter
+        messageSenderUseCase.output = presenter
+        messagesLoadUseCase.output = presenter
         view.presenter = presenter
         
         presenter.output = view
