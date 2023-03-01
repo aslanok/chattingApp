@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MessageTableViewCell : UITableViewCell {
     
@@ -63,7 +64,11 @@ class MessageTableViewCell : UITableViewCell {
     
     func setupCell(message : Message) {
         messageLabel.text = message.body
-        messageSender.text = message.sender
+        if message.sender == Auth.auth().currentUser?.email {
+            messageSender.text = "Me"
+        } else {
+            messageSender.text = message.sender
+        }
     }
     
     override class func awakeFromNib() {

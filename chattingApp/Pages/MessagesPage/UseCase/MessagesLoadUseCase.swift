@@ -24,7 +24,10 @@ class MessagesLoadUseCase : MessagesLoadUseCaseInput {
     var messageList : [Message] = [Message]()
     
     func execute() {
-        db.collection(FirebaseConstants.collectionName).getDocuments { querySnapshot, error in
+        db.collection(FirebaseConstants.collectionName)
+            .order(by: FirebaseConstants.dateField)
+            .addSnapshotListener { (querySnapshot, error) in
+            self.messageList = []
             if let e = error {
                 self.output?.setMessagesLoadFailed(errorMessage: e.localizedDescription)
             } else {

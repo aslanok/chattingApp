@@ -131,6 +131,8 @@ class MessagesMainPageViewController : UIViewController,MessagesMainPageViewCont
     @objc func messageSendClicked(){
         print("butona tıklandı")
         presenter?.messageSend(messageText: messageTextField.text ?? "bos mesaj")
+        messageTextField.text = ""
+        messageTextField.resignFirstResponder()
     }
     
     @objc func logOutButtonClicked(){

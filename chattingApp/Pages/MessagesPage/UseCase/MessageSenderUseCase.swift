@@ -22,10 +22,13 @@ class MessageSenderUseCase : MessageSenderUseCaseInput {
     
     let db = Firestore.firestore()
     
-    
     func execute(messageBody: String) {
         if let messageSender = Auth.auth().currentUser?.email {
-            db.collection(FirebaseConstants.collectionName).addDocument(data: [FirebaseConstants.senderField : messageSender, FirebaseConstants.bodyField : messageBody]) { error in
+            db.collection(FirebaseConstants.collectionName).addDocument(data: [
+                FirebaseConstants.senderField : messageSender,
+                FirebaseConstants.bodyField : messageBody,
+                FirebaseConstants.dateField : Date().timeIntervalSince1970
+            ]) { error in
                 if let e = error {
                     self.output?.setMessageSendFailed(errorMessage: e.localizedDescription)
                 } else {
